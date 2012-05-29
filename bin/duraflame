@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'optparse/date'
+require 'duraflame'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: duraflame [options]"
+
+  opts.on("-c", "--company=COMPANY", "As in http://{company}.campfirenow.com") do |company|
+    options[:company] = company
+  end
+
+  opts.on("-t", "--token=TOKEN", "Authentication token") do |token|
+    options[:token] = token
+  end
+
+  opts.on("-r","--room=ROOM", "Room ID") do |room|
+    options[:room] = room
+  end
+
+  opts.on("-o", "--output-dir=DIRECTORY", "Directory where log files will be written") do |dir|
+    options[:output_dir] = dir
+  end
+
+  opts.on("-s", "--start-date=DATE", Date, "Start date, defaults to today") do |start_date|
+    options[:start_date] = start_date
+  end
+
+  opts.on("-e", "--end-date=DATE", Date, "End date, defaults to today") do |end_date|
+    options[:end_date] = end_date
+  end
+end.parse!
+
+begin
+  Duraflame.execute(options)
+rescue Interrupt
+  abort
+end
