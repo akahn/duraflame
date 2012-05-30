@@ -23,7 +23,9 @@ Gem::Specification.new do |s|
   s.files = %w[
     MIT-LICENSE
     README.md
+    Rakefile
     bin/duraflame
+    duraflame.gemspec
     lib/duraflame.rb
     lib/duraflame/client.rb
     lib/duraflame/message.rb
