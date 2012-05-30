@@ -37,4 +37,10 @@ module Duraflame
       [time, '-!-' , name, '[hostname] has left #campfire'].join(' ')
     end
   end
+
+  class TopicChangeMessage < Message
+    def to_s
+      [time, '-!-' , name, 'changed the topic of #campfire to:', body].join(' ')
+    end
+  end
 end

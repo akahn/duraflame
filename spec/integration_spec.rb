@@ -21,7 +21,7 @@ describe 'Duraflame under integration' do
   end
 
   it 'should output three lines' do
-    @log.length.should == 3
+    @log.length.should == 4
   end
 
   it 'should contain Sisko joining' do
@@ -34,5 +34,9 @@ describe 'Duraflame under integration' do
 
   it 'should contain Sisko leaving' do
     @log[2].should include('02:20 -!- Benjamin Sisko [hostname] has left')
+  end
+
+  it 'should contain the topic changing' do
+    @log[3].should match(/04:31 -!- Benjamin Sisko changed the topic .* to: prime directive/)
   end
 end
