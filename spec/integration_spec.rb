@@ -18,6 +18,8 @@ describe 'Duraflame under integration' do
     }
     Duraflame.execute(options)
 
+    ENV['TZ'] = 'UTC'
+
     @log = File.readlines(Dir.tmpdir + "/2012-01-01-#{options[:room]}.log")
   end
 
