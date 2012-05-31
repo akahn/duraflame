@@ -1,4 +1,5 @@
 require_relative 'helper'
+require 'tmpdir'
 
 describe 'Duraflame under integration' do
   before(:all) do
