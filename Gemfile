@@ -1,7 +1,6 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'yajl-ruby', '~>1.1'
-gem 'httpclient', '~>2.2'
+gemspec
 
 group :test do
   gem 'rake'

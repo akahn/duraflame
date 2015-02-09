@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.extra_rdoc_files = %w[README.md MIT-LICENSE]
 
-  s.add_dependency('httpclient', '~>2.2')
+  s.add_dependency('httpclient', '~>2.6')
   s.add_dependency('yajl-ruby', '~>1.1')
 
   # = MANIFEST =
