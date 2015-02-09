@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name              = 'duraflame'
-  s.version           = '0.2.0'
-  s.date              = '2012-06-29'
+  s.version           = '0.2.1'
+  s.date              = '2015-02-09'
 
   s.summary     = "A command line tool that converts Campfire transcripts to an IRC log format"
   s.description = "Generate pisg (Perl IRC Statistics Generator) stats on Campfire conversations"
